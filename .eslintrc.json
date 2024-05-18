@@ -1,0 +1,23 @@
+{
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "generator-star-spacing": "off",
+    "object-curly-spacing": "off",
+    "space-in-parens": ["off", "always"],
+    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never", "asyncArrow": "always" }],
+    "indent": "off",
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "printWidth": 150,
+        "singleQuote": true,
+        "semi": true,
+        "trailingComma": "none",
+        "bracketSpacing": true
+      }
+    ]
+  }
+}
