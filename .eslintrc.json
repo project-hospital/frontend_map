@@ -9,14 +9,17 @@
         "newlines-between": "always",
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
-    ],    
+    ],
     "import/resolver": {
       "node": {
+        "extensions": [".js", ".jsx"],
         "moduleDirectory": ["node_modules", "src"]
       }
     }
   },
   "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/jsx-no-bind": "off",
     "prettier/prettier": [
       "error",
       {
