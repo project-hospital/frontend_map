@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMapComponent from './G-Map';
 
-function MainContents() {
+export default function MainContents() {
   return (
     <div className="flex flex-1">
       <div className="w-1/4 p-4 border-r border-gray-300">
@@ -21,5 +21,3 @@ function MainContents() {
     </div>
   );
 }
-
-export default MainContents;

@@ -1,13 +1,22 @@
 {
-  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "extends": ["react-app", "react-app/jest", "airbnb", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
+  "settings": {
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], "internal", ["parent", "sibling", "index"]],
+        "newlines-between": "always",
+        "alphabetize": { "order": "asc", "caseInsensitive": true }
+      }
+    ],    
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src"]
+      }
+    }
+  },
   "rules": {
-    "generator-star-spacing": "off",
-    "object-curly-spacing": "off",
-    "space-in-parens": ["off", "always"],
-    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never", "asyncArrow": "always" }],
-    "indent": "off",
-    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
     "prettier/prettier": [
       "error",
       {
