@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 export default function CommonModal() {
   const customModalStyles = {
     overlay: {
-      backgroundColor: ' rgba(0, 0, 0, 0.4)',
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
       width: '100%',
       height: '100vh',
       zIndex: '10',
@@ -28,12 +28,14 @@ export default function CommonModal() {
     }
   };
 
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [modalIsOpen, setIsOpen] = React.useState(true);
 
-  <Modal isOpen={modalIsOpen} onRequestClose={() => setIsOpen(false)} style={customModalStyles} shouldCloseOnOverlayClick ariaHideApp={false}>
-    <h2>언어 선택</h2>
-    <button type="button" onClick={() => setIsOpen(false)}>
-      close
-    </button>
-  </Modal>;
+  return (
+    <Modal isOpen={modalIsOpen} onRequestClose={() => setIsOpen(false)} style={customModalStyles} shouldCloseOnOverlayClick ariaHideApp={false}>
+      <h2>언어 선택</h2>
+      <button type="button" onClick={() => setIsOpen(false)}>
+        close
+      </button>
+    </Modal>
+  );
 }

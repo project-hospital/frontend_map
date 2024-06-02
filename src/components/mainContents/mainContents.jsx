@@ -1,5 +1,6 @@
 import React from 'react';
 import GoogleMapComponent from './G-Map';
+import CommonModal from '../common/commonModal';
 
 export default function MainContents() {
   return (
@@ -23,6 +24,7 @@ export default function MainContents() {
       <div className="flex-1 relative">
         <GoogleMapComponent />
       </div>
+      <CommonModal />
     </div>
   );
 }
