@@ -1,7 +1,11 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { useRecoilState } from 'recoil';
+import textState from '../../store/popup';
 
 export default function CommonModal() {
+  const [popup] = useRecoilState(textState);
+
   const customModalStyles = {
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.4)',
@@ -32,7 +36,7 @@ export default function CommonModal() {
 
   return (
     <Modal isOpen={modalIsOpen} onRequestClose={() => setIsOpen(false)} style={customModalStyles} shouldCloseOnOverlayClick ariaHideApp={false}>
-      <h2>언어 선택</h2>
+      <h2>언어 선택 {popup}</h2>
       <button type="button" onClick={() => setIsOpen(false)}>
         close
       </button>
