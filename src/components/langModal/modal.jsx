@@ -49,7 +49,7 @@ export default function CommonModal() {
           value={searchLanguage}
           onChange={handleSearchChange}
         />
-        <div className="absolute right-3 top-3">
+        <div className="absolute right-3 top-0 h-full flex items-center">
           <SearchIcon />
         </div>
       </div>
