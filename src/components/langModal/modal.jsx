@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { useRecoilState } from 'recoil';
+import i18n from 'locales/i18n';
 import langModalState from '../../store/popup';
 import useList from '../../lang/useList';
 import { ReactComponent as GlobeIcon } from '../../assets/GlobeIcon.svg';
@@ -11,6 +12,10 @@ import styles from './CommonModal.module.css';
 const INITIAL_LANGUAGE = 'ko';
 
 export default function CommonModal() {
+  // 언어 변경하기
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
   const [modalIsOpen, setIsOpen] = useRecoilState(langModalState);
   const [searchLanguage, setsearchLanguage] = useState('');
   const [filteredLanguages, setFilteredLanguages] = useState(useList);
@@ -24,6 +29,11 @@ export default function CommonModal() {
 
   const handleLanguageSelect = (value) => {
     setSelectedLanguage(value);
+  };
+
+  const setLanguage = () => {
+    changeLanguage(selectedLanguage);
+    setIsOpen(false);
   };
 
   return (
@@ -56,7 +66,7 @@ export default function CommonModal() {
       <ul className={`mb-4 overflow-y-auto max-h-40 w-full ${styles.customScrollbar}`}>
         {filteredLanguages.map((language) => (
           <li className="py-1 flex items-center" key={language.value}>
-            {selectedLanguage === language.value && <CheckIcon />}
+            {selectedLanguage === language.value && <CheckIcon className="h-5 w-5" />}
             <button
               className="w-full text-left border border-transparent hover:border-gray-500 rounded-md px-2 py-1 hover:bg-gray-700 hover:text-white"
               type="button"
@@ -71,7 +81,7 @@ export default function CommonModal() {
         <button type="button" className="mr-2 text-gray-400 hover:text-gray-200" onClick={() => setIsOpen(false)}>
           취소
         </button>
-        <button type="button" className="text-blue-500 hover:text-blue-300" onClick={() => setIsOpen(false)}>
+        <button type="button" className="text-blue-500 hover:text-blue-300" onClick={setLanguage}>
           확인
         </button>
       </div>
