@@ -12,10 +12,6 @@ import styles from './CommonModal.module.css';
 const INITIAL_LANGUAGE = 'ko';
 
 export default function CommonModal() {
-  // 언어 변경하기
-  const changeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
-  };
   const [modalIsOpen, setIsOpen] = useRecoilState(langModalState);
   const [searchLanguage, setsearchLanguage] = useState('');
   const [filteredLanguages, setFilteredLanguages] = useState(useList);
@@ -32,7 +28,7 @@ export default function CommonModal() {
   };
 
   const setLanguage = () => {
-    changeLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
     setIsOpen(false);
   };
 
