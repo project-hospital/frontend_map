@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "서울본부지방병원",
+    "address": "서울 강남구 도곡로 21A",
+    "reviewCnt": 12,
+    "languages": "EN, JP, CN 외 3개",
+    "rating": 3,
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+  },
+  {
+    "id": 2,
+    "name": "서울본부지방병원",
+    "address": "서울 강남구 도곡로 21A",
+    "reviewCnt": 12,
+    "languages": "EN, JP, CN 외 3개",
+    "rating": 3,
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+  },
+  {
+    "id": 3,
+    "name": "서울본부지방병원",
+    "address": "서울 강남구 도곡로 21A",
+    "reviewCnt": 12,
+    "languages": "EN, JP, CN 외 3개",
+    "rating": 3,
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+  },
+  {
+    "id": 4,
+    "name": "서울본부지방병원",
+    "address": "서울 강남구 도곡로 21A",
+    "reviewCnt": 12,
+    "languages": "EN, JP, CN 외 3개",
+    "rating": 3,
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+  }
+]

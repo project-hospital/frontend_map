@@ -3,9 +3,9 @@ import Modal from 'react-modal';
 import { useRecoilState } from 'recoil';
 import langModalState from '../../store/popup';
 import useList from '../../lang/useList';
-import { ReactComponent as GlobeIcon } from '../../assets/GlobeIcon.svg';
-import { ReactComponent as SearchIcon } from '../../assets/SearchIcon.svg';
-import { ReactComponent as CheckIcon } from '../../assets/CheckIcon.svg';
+import { ReactComponent as GlobeIcon } from '../../assets/globe_icon.svg';
+import { ReactComponent as SearchIcon } from '../../assets/search_icon_w.svg';
+import { ReactComponent as CheckIcon } from '../../assets/check_icon.svg';
 import styles from './CommonModal.module.css';
 
 const INITIAL_LANGUAGE = 'ko';
