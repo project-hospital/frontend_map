@@ -1,6 +1,7 @@
 import i18n from 'locales/i18n';
 
 const useList = [
+  { value: 'en', text: 'English' },
   { value: 'ja', text: '日本語' }, // 일본어
   { value: 'th', text: 'ภาษาไทย' }, // 태국어
   { value: 'ko', text: '한국어' }, // 한국어
