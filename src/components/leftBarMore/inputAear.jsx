@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useRecoilState } from 'recoil';
+import specialThanksState from '../../store/specialThanksState';
 
 export default function InputAear() {
   const [selectedEmoji, setSelectedEmoji] = useState('🙆‍♂️');
@@ -10,6 +12,18 @@ export default function InputAear() {
   const [rating, setRating] = useState(1);
   const clickRating = (score) => {
     setRating(score);
+  };
+  const [reviewText, setReviewText] = useState('');
+  const reviewTyping = (e) => {
+    setReviewText(e.target.value);
+  };
+
+  const [, setOpenThanksPopup] = useRecoilState(specialThanksState);
+  const submitReview = () => {
+    if (reviewText !== '') {
+      setOpenThanksPopup(true);
+      setReviewText('');
+    }
   };
 
   return (
@@ -101,8 +115,14 @@ export default function InputAear() {
         <textarea
           className="border border-gray-300 rounded w-full p-2 h-24 resize-none"
           placeholder="작성 후 30분 뒤 암호화되어 삭제하실 수 없습니다."
+          onChange={reviewTyping}
+          value={reviewText}
         />
-        <button type="button" className="mt-2 w-full bg-blue-500 text-white py-2 rounded">
+        <button
+          type="button"
+          className={`mt-2 w-full ${reviewText === '' ? 'bg-gray-400' : 'bg-blue-500'} text-white py-2 rounded`}
+          onClick={submitReview}
+        >
           등록
         </button>
       </div>
