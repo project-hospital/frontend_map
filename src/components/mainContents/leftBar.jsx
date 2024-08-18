@@ -7,6 +7,7 @@ import axios from 'axios';
 import langModalState from '../../store/popup';
 import leftMoreState from '../../store/leftMore';
 import LeftMoreBar from '../leftBarMore/leftMoreBar';
+import mapsDataState from '../../store/maps';
 
 export default function LeftBar() {
   const [, setModalOpen] = useRecoilState(langModalState);
@@ -30,6 +31,22 @@ export default function LeftBar() {
   }, []);
 
   const [isLeftMoreOpen, setLeftMoreOpen] = useRecoilState(leftMoreState);
+  const [, setMapsData] = useRecoilState(mapsDataState);
+
+  const setMapMakerPoint = (lat, lng) => {
+    setMapsData({
+      maker: {
+        lat, // 위도
+        lng // 경도
+      },
+      zoom: 15
+    });
+  };
+
+  const moreHospitalInfo = (hospital) => {
+    setLeftMoreOpen(true);
+    setMapMakerPoint(hospital.maker?.lat, hospital.maker?.lng);
+  };
 
   return (
     <div className="absolute top-0 border-r border-gray-300 bg-white z-10 flex flex-1 h-screen">
@@ -56,7 +73,7 @@ export default function LeftBar() {
             type="button"
             className="w-full text-left mb-4 border border-gray-300 rounded-lg p-4"
             key={hospital.id}
-            onClick={() => setLeftMoreOpen(true)}
+            onClick={() => moreHospitalInfo(hospital)}
           >
             <div>
               <img src={hospital.image} alt="병원 이미지" className="w-full h-48 object-cover mb-2 rounded" />
