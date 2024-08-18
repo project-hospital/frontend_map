@@ -1,38 +1,54 @@
 [
   {
     "id": 1,
-    "name": "서울본부지방병원",
+    "name": "인선집주변병원",
     "address": "서울 강남구 도곡로 21A",
     "reviewCnt": 12,
     "languages": "EN, JP, CN 외 3개",
     "rating": 3,
-    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg",
+    "maker": {
+      "lat": 37.613616940342105,
+      "lng": 127.06095731240461
+    }
   },
   {
     "id": 2,
-    "name": "서울본부지방병원",
+    "name": "명필집주변병원",
     "address": "서울 강남구 도곡로 21A",
     "reviewCnt": 12,
     "languages": "EN, JP, CN 외 3개",
     "rating": 3,
-    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg",
+    "maker": {
+      "lat": 37.731966380241104,
+      "lng": 127.04851891946923
+    }
   },
   {
     "id": 3,
-    "name": "서울본부지방병원",
+    "name": "명필회사병원",
     "address": "서울 강남구 도곡로 21A",
     "reviewCnt": 12,
     "languages": "EN, JP, CN 외 3개",
     "rating": 3,
-    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg",
+    "maker": {
+      "lat": 37.51826872303433,
+      "lng": 126.91028111371969
+    }
   },
   {
     "id": 4,
-    "name": "서울본부지방병원",
+    "name": "인선회사병원",
     "address": "서울 강남구 도곡로 21A",
     "reviewCnt": 12,
     "languages": "EN, JP, CN 외 3개",
     "rating": 3,
-    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg"
+    "image": "https://cdn.incheontoday.com/news/photo/202303/227503_230745_4820.jpg",
+    "maker": {
+      "lat": 37.49990434206183,
+      "lng": 127.03240578922002
+    }
   }
 ]
